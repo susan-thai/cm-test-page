@@ -15630,8 +15630,11 @@ var adthrive = (function () {
 	                }
 	                break;
 	            case 1 :
+									console.log('SLOGS ', 'uncollapsed play!!!!')
 	                if (event === 4 ) {
+										console.log('SLOGS UNCOLLAPSED IN VIEW')
 	                    if (this._shouldCollapse(playerContainer, mediaStarted)) {
+												console.log('UNCOLLAPSED INVIEW - SHOULD COLLAPSE?????')
 	                        this.collapse(collapseCollection);
 	                        playerInstance.play(true);
 	                        return 2 ;
@@ -15649,8 +15652,11 @@ var adthrive = (function () {
 	                }
 	                break;
 	            case 2 :
+								console.log('THIS IS COLLAPSED PLAY ')
 	                if (event === 4 ) {
+										console.log('SLOGS!!! this is event 4 collapsedplay IN VIEW')
 	                    if (!this._shouldCollapse(playerContainer, mediaStarted)) {
+												console.log('COLLAPSED INVIEW SHOULD UNCOLLAPSE NOW?????????')
 	                        this.uncollapse(collapseCollection);
 	                        playerInstance.play(true);
 	                        return 1 ;
