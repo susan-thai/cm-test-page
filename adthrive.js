@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 5');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 6');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
@@ -15916,8 +15916,8 @@ var adthrive = (function () {
 				console.log('SLOG ---- SO WHICH ONE OF THE TOGGLECOLLAPSED PLAYER CLASSES IS IT?')
 	        const utils = collapseCollection.playerInstance.utils;
 
-					console.log('SLOG OR IS IT THE TOGGLE CLASSES?....... oh shoot')
-	        // const toggleClass = hasProperty(utils, 'toggleClass') && typeof utils.toggleClass === 'function' ? utils.toggleClass : () => { };
+					console.log('SLOG OR IS IT THE TOGGLE CLASSES?....... oh shoot - toggle back in?')
+	        const toggleClass = hasProperty(utils, 'toggleClass') && typeof utils.toggleClass === 'function' ? utils.toggleClass : () => { };
 	        // if (collapseCollection.forceMobile) {
 	        //     toggleClass(collapseCollection.playerElement, "adthrive-collapse-mobile" , toggleOn);
 	        //     toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
