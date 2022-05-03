@@ -15655,15 +15655,16 @@ var adthrive = (function () {
 								console.log('SLOGS THIS IS COLLAPSED PLAY ')
 	                if (event === 4 ) {
 										console.log('SLOGS!!! this is event 4 collapsedplay IN VIEW')
-	                    if (!this._shouldCollapse(playerContainer, mediaStarted)) {
-												console.log('SLOGS COLLAPSED INVIEW SHOULD UNCOLLAPSE NOW?????????')
-	                        this.uncollapse(collapseCollection);
+										console.log('try removing the if statement?')
+	                    // if (!this._shouldCollapse(playerContainer, mediaStarted)) {
+											// 	console.log('SLOGS COLLAPSED INVIEW SHOULD UNCOLLAPSE NOW?????????')
+	                    //     this.uncollapse(collapseCollection);
+	                    //     playerInstance.play(true);
+	                    //     return 1 ;
+	                    // }
+	                    // else {
 	                        playerInstance.play(true);
-	                        return 1 ;
-	                    }
-	                    else {
-	                        playerInstance.play(true);
-	                    }
+	                    // }
 	                }
 	                else if (event === 1 ) {
 	                    return 4 ;
