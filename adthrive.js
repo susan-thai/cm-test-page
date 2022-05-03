@@ -15876,7 +15876,8 @@ var adthrive = (function () {
 	    static uncollapse(collapseCollection) {
 	        CollapseUtils_1.uncollapseEvent.emit().catch(() => { });
 					console.log('IS IT HERE???')
-	        this.toggleCollapsedPlayerClasses(false, collapseCollection);
+					console.log('SLOGS going to comment out togglecollapsedplayer!!!')
+	        // this.toggleCollapsedPlayerClasses(false, collapseCollection);
 	        this._unstickFromSidebar(collapseCollection.playerElement);
 	        collapseCollection.closeButton.style.display = 'none';
 	        this.resizeContainer(collapseCollection);
