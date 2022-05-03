@@ -15859,8 +15859,8 @@ var adthrive = (function () {
 	            return;
 	        }
 	        this.collapseEvent.emit().catch(() => { });
-					console.log('SLOGS!!!!! commenting out the collapse togglecollapsedplayerclasses now!')
-	        // this.toggleCollapsedPlayerClasses(true, collapseCollection);
+					console.log('SLOGS!!!!! THIS IS THE COLLAPSE METHOD THIS IS THE PLACE - collapse togglecollapsedplayerclasses now!')
+	        this.toggleCollapsedPlayerClasses(true, collapseCollection);
 	        if (!collapseCollection.forceMobile && collapseCollection.collapseType === "adthrive-collapse-sticky" ) {
 	            this._stickToSidebar(collapseCollection);
 	        }
@@ -15912,35 +15912,38 @@ var adthrive = (function () {
 	            collapseCollection.footerElement.getBoundingClientRect().top);
 	    }
 	    static toggleCollapsedPlayerClasses(toggleOn, collapseCollection) {
+				//IT IS HERE????
+				console.log('SLOG ---- SO WHICH ONE OF THE TOGGLECOLLAPSED PLAYER CLASSES IS IT?')
 	        const utils = collapseCollection.playerInstance.utils;
 	        const toggleClass = hasProperty(utils, 'toggleClass') && typeof utils.toggleClass === 'function' ? utils.toggleClass : () => { };
-	        if (collapseCollection.forceMobile) {
-	            toggleClass(collapseCollection.playerElement, "adthrive-collapse-mobile" , toggleOn);
-	            toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
-	            toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSubType, toggleOn);
-	            if (collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-left"  ||
-	                collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-right" ) {
-	                this.repositionCollapseMobileBottom(collapseCollection);
-	            }
-	        }
-	        else {
-	            toggleClass(collapseCollection.playerElement, collapseCollection.collapseType, toggleOn);
-	            if (collapseCollection.collapseSubType) {
-	                toggleClass(collapseCollection.playerElement, collapseCollection.collapseSubType, toggleOn);
-	            }
-	            if (collapseCollection.collapseMobileSizeType) {
-	                toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
-	            }
-	            if (collapseCollection.collapseType === "adthrive-collapse-mobile" ) {
-	                toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSubType, toggleOn);
-	                if (collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-left"  ||
-	                    collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-right" ) {
-	                    this.repositionCollapseMobileBottom(collapseCollection);
-	                }
-	            }
-	        }
+	        // if (collapseCollection.forceMobile) {
+	        //     toggleClass(collapseCollection.playerElement, "adthrive-collapse-mobile" , toggleOn);
+	        //     toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
+	        //     toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSubType, toggleOn);
+	        //     if (collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-left"  ||
+	        //         collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-right" ) {
+	        //         this.repositionCollapseMobileBottom(collapseCollection);
+	        //     }
+	        // }
+	        // else {
+	        //     toggleClass(collapseCollection.playerElement, collapseCollection.collapseType, toggleOn);
+	        //     if (collapseCollection.collapseSubType) {
+	        //         toggleClass(collapseCollection.playerElement, collapseCollection.collapseSubType, toggleOn);
+	        //     }
+	        //     if (collapseCollection.collapseMobileSizeType) {
+	        //         toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
+	        //     }
+	        //     if (collapseCollection.collapseType === "adthrive-collapse-mobile" ) {
+	        //         toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSubType, toggleOn);
+	        //         if (collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-left"  ||
+	        //             collapseCollection.collapseMobileSubType === "adthrive-collapse-bottom-right" ) {
+	        //             this.repositionCollapseMobileBottom(collapseCollection);
+	        //         }
+	        //     }
+	        // }
 	    }
 	    static repositionCollapseMobileBottom(collapseCollection) {
+				console.log('IS IT THE REPOSITION COLLAPSE MOBILE BOTTOM???')
 	        if (collapseCollection.playerElement.className.indexOf('adthrive-collapse-bottom') >= 0) {
 	            const footerBottom = calculateFooterBottom();
 	            collapseCollection.playerElement.style.setProperty('top', 'auto', 'important');
