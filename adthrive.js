@@ -15859,7 +15859,8 @@ var adthrive = (function () {
 	            return;
 	        }
 	        this.collapseEvent.emit().catch(() => { });
-	        this.toggleCollapsedPlayerClasses(true, collapseCollection);
+					console.log('SLOGS!!!!! commenting out the collapse togglecollapsedplayerclasses now!')
+	        // this.toggleCollapsedPlayerClasses(true, collapseCollection);
 	        if (!collapseCollection.forceMobile && collapseCollection.collapseType === "adthrive-collapse-sticky" ) {
 	            this._stickToSidebar(collapseCollection);
 	        }
@@ -15876,7 +15877,7 @@ var adthrive = (function () {
 	    static uncollapse(collapseCollection) {
 	        CollapseUtils_1.uncollapseEvent.emit().catch(() => { });
 					console.log('IS IT HERE???')
-					console.log('SLOGS going to comment out togglecollapsedplayer!!!')
+					console.log('SLOGS going to comment out togglecollapsedplayer in uncollapse - does not work !!!')
 	        // this.toggleCollapsedPlayerClasses(false, collapseCollection);
 	        this._unstickFromSidebar(collapseCollection.playerElement);
 	        collapseCollection.closeButton.style.display = 'none';
