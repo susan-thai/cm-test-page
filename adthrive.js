@@ -15612,6 +15612,8 @@ var adthrive = (function () {
 	            playerInstance.pause(true);
 	            return 7 ;
 	        }
+
+					return;
 	        switch (playerState) {
 	            case 0 :
 	                if (event === 4 ) {
