@@ -1396,13 +1396,13 @@ var adthrive = (function () {
 	        this.debug = adthrive.debug;
 	    }
 	    log(className, methodName, ...args) {
-	        this.call(console.log, className, methodName, ...args);
+	        // this.call(console.log, className, methodName, ...args);
 	    }
 	    info(className, methodName, ...args) {
-	        this.call(console.info, className, methodName, ...args);
+	        // this.call(console.info, className, methodName, ...args);
 	    }
 	    warn(className, methodName, ...args) {
-	        this.call(console.warn, className, methodName, ...args);
+	        // this.call(console.warn, className, methodName, ...args);
 	    }
 	    error(className, methodName, ...args) {
 	        this.call(console.error, className, methodName, ...args);
@@ -14708,6 +14708,7 @@ var adthrive = (function () {
 	                    this._sticky.push(new Sticky(slot, true));
 	                }
 	                if (slot.location === 'Video_StickyOutstream') {
+										// should this be disabled?
 	                    this._stickyOutstream = new StickyOutstream(this._config, this._slotManager, slot, this._stickyCloseButtonExperiment, this._eventProxy, this._videoCloseButton);
 	                }
 	            }
@@ -15613,7 +15614,9 @@ var adthrive = (function () {
 	            return 7 ;
 	        }
 
-					return;
+
+					// if return early, don't seem to get a jump action
+
 	        switch (playerState) {
 	            case 0 :
 	                if (event === 4 ) {
@@ -15872,6 +15875,7 @@ var adthrive = (function () {
 	    }
 	    static uncollapse(collapseCollection) {
 	        CollapseUtils_1.uncollapseEvent.emit().catch(() => { });
+					console.log('IS IT HERE???')
 	        this.toggleCollapsedPlayerClasses(false, collapseCollection);
 	        this._unstickFromSidebar(collapseCollection.playerElement);
 	        collapseCollection.closeButton.style.display = 'none';
