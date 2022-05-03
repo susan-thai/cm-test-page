@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 6');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 7');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
@@ -15660,7 +15660,8 @@ var adthrive = (function () {
 								console.log('SLOGS THIS IS COLLAPSED PLAY ')
 	                if (event === 4 ) {
 										console.log('SLOGS!!! this is event 4 collapsedplay IN VIEW')
-										console.log('try removing the if statement?')
+										console.log('SLOGS --- try removing the if statement?')
+										console.log('SLOGS ------- JUST STOP PLAYING IT -------')
 	                    // if (!this._shouldCollapse(playerContainer, mediaStarted)) {
 											// 	console.log('SLOGS COLLAPSED INVIEW SHOULD UNCOLLAPSE NOW?????????')
 	                    //     this.uncollapse(collapseCollection);
@@ -15668,7 +15669,7 @@ var adthrive = (function () {
 	                    //     return 1 ;
 	                    // }
 	                    // else {
-	                        playerInstance.play(true);
+	                        // playerInstance.play(true);
 	                    // }
 	                }
 	                else if (event === 1 ) {
