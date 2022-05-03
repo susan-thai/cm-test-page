@@ -15915,7 +15915,9 @@ var adthrive = (function () {
 				//IT IS HERE????
 				console.log('SLOG ---- SO WHICH ONE OF THE TOGGLECOLLAPSED PLAYER CLASSES IS IT?')
 	        const utils = collapseCollection.playerInstance.utils;
-	        const toggleClass = hasProperty(utils, 'toggleClass') && typeof utils.toggleClass === 'function' ? utils.toggleClass : () => { };
+
+					console.log('SLOG OR IS IT THE TOGGLE CLASSES?....... oh shoot')
+	        // const toggleClass = hasProperty(utils, 'toggleClass') && typeof utils.toggleClass === 'function' ? utils.toggleClass : () => { };
 	        // if (collapseCollection.forceMobile) {
 	        //     toggleClass(collapseCollection.playerElement, "adthrive-collapse-mobile" , toggleOn);
 	        //     toggleClass(collapseCollection.playerElement, collapseCollection.collapseMobileSizeType, toggleOn);
