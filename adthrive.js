@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 9');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 10');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
