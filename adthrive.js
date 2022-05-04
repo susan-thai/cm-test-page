@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 10');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 11');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
@@ -4688,7 +4688,7 @@ var adthrive = (function () {
 	        this.addEventListener('beforeunload', this.beforeUnload);
 	        this.addEventListener('pagehide', this.pageHide);
 	        this.addEventListener('resize', this.resize);
-	        this.addEventListener('scroll', this.scroll);
+	        // this.addEventListener('scroll', this.scroll);
 	        this.addEventListener('visibilitychange', this.visibilityChange, document);
 	        runBrowserWorkarounds();
 	    }
@@ -14676,7 +14676,7 @@ var adthrive = (function () {
 	                isResizeTimeout = false;
 	            }, resizeTimeout);
 	        };
-	        this._pageManager.scroll.on(() => scrollListener());
+	        // this._pageManager.scroll.on(() => scrollListener());
 	        this._pageManager.resize.on(() => resizeListener());
 	        this._pageManager.visibilityChange.on(() => {
 	            void this.pageVisibility.emit(document.hidden);
