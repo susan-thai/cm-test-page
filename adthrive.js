@@ -15952,7 +15952,7 @@ var adthrive = (function () {
 	            const footerBottom = calculateFooterBottom();
 	            collapseCollection.playerElement.style.setProperty('top', 'auto', 'important');
 	            collapseCollection.playerElement.style.setProperty('bottom', `${footerBottom}px`, 'important');
-							debugger;
+							// debugger;
 	        }
 	    }
 	    static resizeContainer(collapseCollection) {
