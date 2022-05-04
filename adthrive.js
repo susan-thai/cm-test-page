@@ -16221,7 +16221,8 @@ var adthrive = (function () {
 	            this._playerInstance.remove();
 	            this.addToPage();
 	            this.setPlayerInstance(this);
-	            this.handleScroll();
+							console.log('SLOGS REMOVED HANDLEDSCROLL')
+	            // this.handleScroll();
 	        }
 	    }
 	    _enableTearDown() {
@@ -16321,7 +16322,8 @@ var adthrive = (function () {
 	            ['play', 'adPlay'].forEach(eventType => {
 	                this._playerInstance.once(eventType, () => {
 	                    this._collapseCollection.mediaStarted = true;
-	                    CollapseUtils.handleScroll(this._collapseCollection);
+											console.log('slogs remove collapseutils handlescroll')
+	                    // CollapseUtils.handleScroll(this._collapseCollection);
 	                });
 	            });
 	        }
@@ -16445,9 +16447,10 @@ var adthrive = (function () {
 	        };
 	    }
 	    handleScroll() {
-	        if (this._collapseCollection) {
-	            CollapseUtils.handleScroll(this._collapseCollection);
-	        }
+				console.log('slogs shouldve just commented it out here')
+	        // if (this._collapseCollection) {
+	        //     CollapseUtils.handleScroll(this._collapseCollection);
+	        // }
 	    }
 	    handleResize() {
 	        if (this._collapseCollection) {
@@ -16662,8 +16665,8 @@ var adthrive = (function () {
 	                this._eventProxy.footerRefreshed.on(this.handleFooterRefreshedEvent.bind(this));
 	            }
 	            this._playerContainer = this._pageElement;
-	            this._eventProxy.scroll.on(this.handleScroll.bind(this));
-	            this._eventProxy.resize.on(this.handleResize.bind(this));
+	            // this._eventProxy.scroll.on(this.handleScroll.bind(this));
+	            // this._eventProxy.resize.on(this.handleResize.bind(this));
 	            this._eventProxy.pageVisibility.on(this.handlePageVisibilityChange.bind(this));
 	        }
 	    }
@@ -16762,9 +16765,9 @@ var adthrive = (function () {
 	            .then((result) => {
 	            if (result.playlist && result.playlist.length) {
 	                const newPlaylist = this._playerInstance.getPlaylist().concat(VideoUtils.shufflePlaylist(result.playlist));
-	                this._playerInstance.once('userInactive', () => { var _a; return !((_a = this._collapseCollection) === null || _a === void 0 ? void 0 : _a.mediaStarted) && this.handleScroll(); });
+	                // this._playerInstance.once('userInactive', () => { var _a; return !((_a = this._collapseCollection) === null || _a === void 0 ? void 0 : _a.mediaStarted) && this.handleScroll(); });
 	                this._playerInstance.load(newPlaylist);
-	                this.handleScroll();
+	                // this.handleScroll();
 	            }
 	        })
 	            .catch(() => false);
@@ -16916,7 +16919,7 @@ var adthrive = (function () {
 	        };
 	    }
 	    setup() {
-	        this._eventProxy.scroll.on(this.handleScroll.bind(this));
+	        // this._eventProxy.scroll.on(this.handleScroll.bind(this));
 	        this._eventProxy.resize.on(this.handleResize.bind(this));
 	        this._eventProxy.pageVisibility.on(this.handlePageVisibilityChange.bind(this));
 	        this._eventProxy.videoPlaying.on(this.handleVideoPlayingEvent.bind(this));
