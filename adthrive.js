@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 7');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 9');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
@@ -14716,7 +14716,8 @@ var adthrive = (function () {
 	    }
 	    stickyOutstreamReady() {
 	        if (this._stickyOutstream && !this._stickyOutstream.renderState) {
-	            this._stickyOutstream.setup();
+						console.log('SLOGGGSS LETS TRY NOT SETTING UP STICKYOUTSTREAM')
+	            // this._stickyOutstream.setup();
 	        }
 	    }
 	};
@@ -15951,6 +15952,7 @@ var adthrive = (function () {
 	            const footerBottom = calculateFooterBottom();
 	            collapseCollection.playerElement.style.setProperty('top', 'auto', 'important');
 	            collapseCollection.playerElement.style.setProperty('bottom', `${footerBottom}px`, 'important');
+							debugger;
 	        }
 	    }
 	    static resizeContainer(collapseCollection) {
