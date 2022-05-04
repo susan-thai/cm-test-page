@@ -1,4 +1,4 @@
-console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 11');
+console.log('%cSLogs', 'background-color:hotpink;padding:2px;color:white;font-size:1.2em)', 'HELLO ADTHRIVE.JS - 12');
 
 
 adthrive.branch = adthrive.branch || 'master fbb51857';
@@ -13657,10 +13657,10 @@ var adthrive = (function () {
 	    }
 	    callCheckEmailProviders(event) {
 	        if (event.type !== 'mouseleave' || event.clientY <= 0) {
-	            setTimeout(() => {
-	                if (!this._emailProviderOnPage)
-	                    this.emailProviderHandler();
-	            }, this._emailCheckTimeout);
+	            // setTimeout(() => {
+	            //     if (!this._emailProviderOnPage)
+	            //         this.emailProviderHandler();
+	            // }, this._emailCheckTimeout);
 	        }
 	    }
 	    emailProviderHandler() {
